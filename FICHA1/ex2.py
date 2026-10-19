@@ -26,8 +26,8 @@ for a in range(len(notas)):
         nota_alta += 1
 
 print(f"Aprovados: {aprovados}")
-print(f"Reprovados: {reprovados}")
+print(f"Reprovados:{reprovados}")
 print(f"Notas altas: {nota_alta}")
 
 perc_aprovado = (aprovados / len(notas)) * 100
-print(f"Percentagem de aprovados: {round(perc_aprovado,2)}")
+print(f"Percentagem de aprovados: {round(perc_aprovado)}")
