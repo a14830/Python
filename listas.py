@@ -1,55 +1,97 @@
-from random import randint
-import os
+jogadores =  ["J1","J2","J3"]
 
-nums = []
+# Inserir um jogador
+jogadores.append("J4") # ["J1","J2","J3","J4"]
 
-for _ in range(30):
-    nums.append(randint(0, 100))
+# Inserir vários
+jogadores.extend(["J5","J6"]) # ["J1","J2","J3","J4","J5","J6"]
+nj = ["J7","J8"] # ["J1","J2","J3","J4","J5","J6","J7","J8"]
+jogadores.extend(nj)
 
-soma = sum(nums)
-maior = max(nums)
-menor = min(nums)
-media = sum(nums) / len(nums)
+#Inserir um em uma posição específica
+jogadores.insert(2,"J9") # ["J1","J2","J9","J3","J4","J5","J6","J7","J8"]
 
-acimadamedia = []
-for n in nums:
-    if n > media:
-        acimadamedia.append(n)
+# Remover o último jogador
+jogadores.pop() # ["J1","J2","J9","J3","J4","J5","J6","J7"]
 
-print(f"Lista: {nums}")
-print(f"Soma: {soma} | Maior: {maior} | Menor: {menor} | Média: {media}")
-print(f"Acima da média: {acimadamedia}")
+# Remover um jogador em uma posição específica
+jogadores.pop(4) # ["J1","J2","J9","J3","J5","J6","J7"]
 
+# Remover o jogador pelo nome
+jogadores.remove("J6") # ["J1","J2","J9","J3","J5","J7"]
 
+# Saber o nº de jogadores
+y = len(jogadores) # 6
 
+# Copiar uma lista
+lista1 = [1,2,3]
+lista2 = lista1 # As listas ficam ligadas
+print(lista1,lista2)
+lista1.append(5)
+print(lista1,lista2)
+lista3 = lista1.copy() # As listas são independentes
+lista1.append(7)
+print(lista1, lista2, lista3)
 
+# Ordenar
+lista1.sort()
 
-# # # Imprimir lista
-# print (nums) # [2,5,8,11,7,9,13]
-# # # Imprimir um elemento da lista
-# print (nums[2]) # 8
-# # # inserir um elemento no final
-# nums.append(17) # [2,5,8,11,7,9,13,17]
-# # # inserir varios elementos no final da lista
-# nums.extend([12,16]) # [2,5,8,11,7,9,13 ,17,12,16]
-# # # inserir em posição especifica
-# nums.insert(3,29) # [2,5,8,29,7,9,13 ,17,12,16]
+# Ordenar descendentemente
+lista1.sort(reverse=True)
 
-# # # remover um elemento no final da lista
-# nums.pop() # [2,5,8,11,7,9,13,17]
-# # # remover um elemento de uma posição especifica
-# nums.pop(2) # [2,5,8,11,7,9,13 ,17,12,16]
-# # # inserir em posição especifica
-# nums.remove(17) # [2,5,8,29,7,9,13 ,17,12,16]
-# # # nº de elementos da lista
-# total = len(nums)
+# Inverter a lista
+lista1.reverse()
 
-# for n in nums: # para cada elemento da minha lsita
-#    if n <=10:
-#         print(n,end=" ")
-# for indice in range(len(nums)):
-#     if nums[indice] <=10:
-#         print(nums[indice], end =" ")
+# Devolver o índice de um elemento
+jogadores.index("J3") # 3
+# ["J1","J2","J9","J3","J5","J7"]
+jogadores.append("J5")
 
-# nums =  [1,5,11,23,32]
-# media = 22.2
+#Nº de ocorrências do J5
+abcd = jogadores.count("J5")
+print(abcd)
+
+# LIST COMPREHENSION
+
+# nums = []
+# for i in range(1,101):
+#     nums.append(i)
+# print(nums)
+
+nums = [i for i in range(1,101)]
+print(nums)
+
+nums2 = [8,11,5,3,21,19,14,7]
+
+# nums_filtrados = []
+# for num in nums2:
+#     if 10 <= num <= 20:
+#         nums_filtrados.append(num)
+
+nums_filtrados = [num for num in nums2 if 10<= num <= 20]
+
+# nums_filtrados2 = []
+# for num in nums2:
+#     if 10 <= num <= 20:
+#             if num % 2 == 0: # É par
+#                 nums_filtrados2.append(num*2)
+#             else:
+#                 nums_filtrados2.append(num)
+
+nums_filtrados2 = [num*2 if num % 2 == 0 else num for num in nums2 if 10 <= num <= 20]
+print(nums_filtrados2)
+
+frutas = ["morango", "banana", "ameixa", "pera"]
+# Nº de caracteres de cada fruta
+letras_frutas = [len(fruta) for fruta in frutas]
+print(letras_frutas)
+
+nome = "Tiago"
+print(nome)
+nome = list(nome)
+print(nome)
+
+lista = ["Al", "Mar", "Abr"]
+novos_elementos = input("Novos dados: ")
+lista.extend(novos_elementos.split(','))
+print(lista)
