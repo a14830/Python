@@ -31,14 +31,14 @@ for aluno in escola.values():
 media = round(sum(notas_aluno)/len(notas_aluno),2)
 print(f"Aluno(a) {nome_aluno} teve de {media} valores de media final")
 
-texto = "Waner Ribeiro De Souza Filho"
+# texto = "Waner Ribeiro De Souza Filho"
 
-contagem = {}
-for letra in texto:
-   letra = letra.lower()
-   if letra.isspace() == False:
-      if letra in contagem.keys():
-         contagem[letra]+=1
-      else :
-         contagem[letra]=1
-         print(contagem)
+# contagem = {}
+# for letra in texto:
+#    letra = letra.lower()
+#    if letra.isspace() == False:
+#       if letra in contagem.keys():
+#          contagem[letra]+=1
+#       else :
+#          contagem[letra]=1
+#          print(contagem)

@@ -53,3 +53,19 @@ for notas_disciplina in aluno["notas"].values():
     no_notas += len(notas_disciplina)
 
 print(f"A média das notas é: {round(soma/no_notas,2)}")
+
+quadrados = {str(i): i*i for i in range(1,11)}
+print(quadrados)
+
+palavras = ["ragebait", "aiai","uuuiii"]
+dic_palavras = {palavras: len(palavras) for palavras in palavras}
+print(dic_palavras)
+
+notas = {"Ana":18,"waner":17,"andre":16,"dias":15}
+melhores_alunos = {aluno:nota for aluno,nota in notas.items()if nota >= 15}
+print(melhores_alunos)
+
+
+
+
+
