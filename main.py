@@ -34,7 +34,6 @@ while True:
     # os.system("clear")
     escolha = menu()
 
-
     
 
 products.append(add("camisa",12.23,0.13))
