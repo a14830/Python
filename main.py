@@ -1,6 +1,4 @@
 from functions import add, update_final_price, print_products, menu
-import os
-
 
 products = []
 escolha = menu()
