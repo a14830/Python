@@ -3,7 +3,7 @@
 # deve ser denominada add.
 
 
-def add( id: int, titulo, autor ):
+def add( id: int, titulo: str, autor ):
     return {
         "Id": id,
         "Titulo": titulo,
